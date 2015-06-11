@@ -1,4 +1,8 @@
 language: csharp
+before_script:
+  - npm install -g grunt-cli
+  - npm install -g bower
+  - bower install -f
 install:
   - curl -sSL https://raw.githubusercontent.com/aspnet/Home/master/kvminstall.sh | sh && source ~/.k/kvm/kvm.sh
   - kvm upgrade
