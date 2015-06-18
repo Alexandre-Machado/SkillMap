@@ -23,6 +23,8 @@ using Microsoft.Framework.Runtime;
 using CWI.SkillMap.Models;
 using CWI.SkillMap.Domain.Repository;
 using CWI.SkillMap.Domain.Entity;
+using CWI.SkillMap.Domain.Service;
+using CWI.SkillMap.Domain;
 
 namespace CWI.SkillMap
 {
@@ -82,6 +84,7 @@ namespace CWI.SkillMap
             // Add MVC services to the services container.
             services.AddMvc();
 
+            services.AddTransient<IProfileService, ProfileService>();
             // Uncomment the following line to add Web API services which makes it easier to port Web API 2 controllers.
             // You will also need to add the Microsoft.AspNet.Mvc.WebApiCompatShim package to the 'dependencies' section of project.json.
             // services.AddWebApiConventions();

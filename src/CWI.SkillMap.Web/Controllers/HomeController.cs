@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using CWI.SkillMap.Domain.Service;
 
 namespace CWI.SkillMap.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ControllerBase
     {
+        public HomeController(IProfileService profileService)
+        {
+            ProfileService = profileService;
+        }
+
         public IActionResult Index()
         {
+            var prof = ProfileService.CurrentProfile();
             return View();
         }
 
