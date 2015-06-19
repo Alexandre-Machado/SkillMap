@@ -7,11 +7,10 @@
   "licenseUrl": "",
 
   "dependencies": {
-    "EntityFramework.Commands": "7.0.0-*",
-    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-*",
-    "EntityFramework.SqlServer": "7.0.0-*",
-    "AutoMapper": "3.3.1",
-    "EntityFramework.Core": "7.0.0-beta4",
+    "EntityFramework.Commands": "7.0.0-beta4",
+    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-beta4",
+    "EntityFramework.SqlServer": "7.0.0-beta4",
+    "EntityFramework.Core": "7.0.0-beta4"
   },
 
   "frameworks": {
