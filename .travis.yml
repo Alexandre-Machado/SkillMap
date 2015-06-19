@@ -1,10 +1,10 @@
 before_script:
   - npm install -g gulp
-  - npm install -g bower
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - bower install -f
 language: csharp
 install:
+  - npm install -g bower
   - curl -sSL https://raw.githubusercontent.com/aspnet/Home/master/kvminstall.sh | sh && source ~/.k/kvm/kvm.sh
   - kvm upgrade
   - kpm restore --no-cache
