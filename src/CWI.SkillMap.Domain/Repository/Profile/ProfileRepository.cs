@@ -13,9 +13,11 @@ namespace CWI.SkillMap.Domain.Repository
             context = _context;
         }
 
-        public Task<Profile> GetProfileByLogin(string login)
+        public async Task<Profile> GetProfileByLogin(string login)
         {
-            throw new NotImplementedException();
+            var query = await context.Profiles.SingleAsync(_ => _.Login == login);
+
+            return query;
         }
     }
 }
