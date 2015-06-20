@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Data.Entity;
+﻿using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Framework.OptionsModel;
 using CWI.SkillMap.Domain.Entity;
@@ -11,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CWI.SkillMap.Domain.Repository
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : DbContext
     {
         private static bool _created;
 
@@ -43,14 +41,8 @@ namespace CWI.SkillMap.Domain.Repository
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            // Visual Studio 2015 | Use the LocalDb 12 instance created by Visual Studio
-            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;");
 
-            // Visual Studio 2013 | Use the LocalDb 11 instance created by Visual Studio
-            //optionsBuilder.UseSqlServer(@"Server=(localdb)\v11.0;Database=Blogging;Trusted_Connection=True;");
-
-            // Visual Studio 2012 | Use the SQL Express instance created by Visual Studio
-            //optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=Blogging;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SkillMap;Trusted_Connection=True;");
         }
     }
 }

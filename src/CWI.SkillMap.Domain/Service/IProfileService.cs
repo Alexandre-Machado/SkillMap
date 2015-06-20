@@ -5,6 +5,6 @@ namespace CWI.SkillMap.Domain.Service
 {
     public interface IProfileService
     {
-        Task<ProfileModel> CurrentProfile();
+        ProfileModel CurrentProfile();
     }
 }

@@ -12,6 +12,6 @@ namespace CWI.SkillMap.Domain.Entity
 
         public string Group { get; set; }
 
-        public Skill ParentSkill { get; set; }
+        public Skill Parent { get; set; }
     }
 }

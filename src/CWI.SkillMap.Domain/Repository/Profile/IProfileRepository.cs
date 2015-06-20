@@ -6,6 +6,6 @@
 
     public interface IProfileRepository : IDisposable
     {
-        Task<Profile> GetProfileByLogin(string login);
+        Profile GetProfileByLogin(string login);
     }
 }

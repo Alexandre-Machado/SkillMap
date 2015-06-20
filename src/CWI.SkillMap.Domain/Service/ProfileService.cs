@@ -15,9 +15,9 @@ namespace CWI.SkillMap.Domain.Service
             profileRepository = _profileRepository;
         }
 
-        public async Task<ProfileModel> CurrentProfile()
+        public ProfileModel CurrentProfile()
         {
-            var profile = await profileRepository.GetProfileByLogin("");
+            var profile = profileRepository.GetProfileByLogin("");
 
             return new ProfileModel
             {

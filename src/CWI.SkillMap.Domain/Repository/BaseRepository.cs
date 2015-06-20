@@ -7,6 +7,11 @@ namespace CWI.SkillMap.Domain.Repository
 {
     public class BaseRepository : IDisposable
     {
+        public BaseRepository(ApplicationDbContext _context)
+        {
+            context = _context;
+        }
+
         public ApplicationDbContext context;
 
         #region IDisposable Support

@@ -8,14 +8,11 @@ namespace CWI.SkillMap.Domain.Repository
 {
     public class ProfileRepository : BaseRepository, IProfileRepository
     {
-        public ProfileRepository(ApplicationDbContext _context)
-        {
-            context = _context;
-        }
+        public ProfileRepository(ApplicationDbContext _context) : base(_context) { }
 
-        public async Task<Profile> GetProfileByLogin(string login)
+        public Profile GetProfileByLogin(string login)
         {
-            var query = await context.Profiles.SingleAsync(_ => _.Login == login);
+            var query = context.Profiles.Single(_ => _.Login == login);
 
             return query;
         }
