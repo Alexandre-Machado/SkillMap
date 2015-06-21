@@ -17,13 +17,22 @@ namespace CWI.SkillMap.Domain.Service
 
         public ProfileModel CurrentProfile()
         {
-            var profile = profileRepository.GetProfileByLogin("");
+            var profile = profileRepository.GetProfileByLogin("cwinet\alexandrelima");
 
             return new ProfileModel
             {
                 Name = profile.Name,
                 Email = profile.Email
             };
+        }
+
+        public List<ProfileModel> GetAllProfiles()
+        {
+            return profileRepository.GetAll().Select(_ => new ProfileModel
+            {
+                Email = _.Email,
+                Name = _.Name
+            }).ToList();
         }
     }
 }

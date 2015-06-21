@@ -8,9 +8,19 @@ using CWI.SkillMap.Domain.Repository;
 namespace CWI.SkillMap.Domain.Migrations
 {
     [ContextType(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class ProfileAndMastery
     {
-        public override IModel Model
+        public override string Id
+        {
+            get { return "20150621002901_ProfileAndMastery"; }
+        }
+        
+        public override string ProductVersion
+        {
+            get { return "7.0.0-beta4-12943"; }
+        }
+        
+        public override IModel Target
         {
             get
             {

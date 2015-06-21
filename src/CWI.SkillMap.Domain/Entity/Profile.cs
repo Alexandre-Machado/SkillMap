@@ -11,8 +11,6 @@ namespace CWI.SkillMap.Domain.Entity
 
         public string Name { get; set; }
 
-        public IEnumerable<Skill> Skills { get; set; }
-
         public string Email { get; internal set; }
     }
 }

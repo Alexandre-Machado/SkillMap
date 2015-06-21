@@ -1,10 +1,10 @@
 ﻿namespace CWI.SkillMap.Domain.Repository
 {
-    using CWI.SkillMap.Domain.Entity;
+    using Entity;
     using System;
-    using System.Threading.Tasks;
+    using System.Collections.Generic;
 
-    public interface IProfileRepository : IDisposable
+    public interface IProfileRepository : IDisposable, IRepository<Profile>
     {
         Profile GetProfileByLogin(string login);
     }

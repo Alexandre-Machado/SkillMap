@@ -6,14 +6,16 @@ using CWI.SkillMap.Domain.Entity;
 
 namespace CWI.SkillMap.Domain.Repository
 {
-    public class ProfileRepository : BaseRepository, IProfileRepository
+    public class ProfileRepository : BaseRepository<Profile>, IProfileRepository
     {
-        public ProfileRepository(ApplicationDbContext _context) : base(_context) { }
+        public ProfileRepository(ApplicationDbContext _context)
+        {
+            context = _context;
+        }
 
         public Profile GetProfileByLogin(string login)
         {
-            var query = context.Profiles.Single(_ => _.Login == login);
-
+            var query = context.Profiles.FirstOrDefault(_ => _.Login == login);
             return query;
         }
     }

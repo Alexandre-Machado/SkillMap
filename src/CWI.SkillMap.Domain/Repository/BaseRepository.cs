@@ -7,11 +7,6 @@ namespace CWI.SkillMap.Domain.Repository
 {
     public class BaseRepository : IDisposable
     {
-        public BaseRepository(ApplicationDbContext _context)
-        {
-            context = _context;
-        }
-
         public ApplicationDbContext context;
 
         #region IDisposable Support
@@ -48,5 +43,13 @@ namespace CWI.SkillMap.Domain.Repository
             // GC.SuppressFinalize(this);
         }
         #endregion
+    }
+
+    public class BaseRepository<T> : BaseRepository where T : class
+    {
+        public IEnumerable<T> GetAll()
+        {
+            return context.Set<T>().AsEnumerable();
+        }
     }
 }

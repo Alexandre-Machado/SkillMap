@@ -16,21 +16,7 @@ namespace CWI.SkillMap.Controllers
 
         public IActionResult Index()
         {
-            var prof = ProfileService.CurrentProfile();
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
+            ViewBag.Count = ProfileService.GetAllProfiles().Count();
             return View();
         }
 
