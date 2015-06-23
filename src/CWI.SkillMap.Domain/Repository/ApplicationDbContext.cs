@@ -1,11 +1,5 @@
 ﻿using Microsoft.Data.Entity;
-using Microsoft.Data.Entity.Metadata;
-using Microsoft.Framework.OptionsModel;
 using CWI.SkillMap.Domain.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CWI.SkillMap.Domain.Migrations;
 
 namespace CWI.SkillMap.Domain.Repository
@@ -41,8 +35,7 @@ namespace CWI.SkillMap.Domain.Repository
             builder.Entity<Profile>().Property(_ => _.ProfileID).UseStoreDefault();
             builder.Entity<Skill>().Key(_ => _.SkillID);
             builder.Entity<ProfileSkill>().Key(_ => _.ProfileSkillID);
-            builder.Entity<Entity.Mastery>().Key(_ => _.MasteryID);    
-
+            builder.Entity<Mastery>().Key(_ => _.MasteryID);
 
         }
 
@@ -50,7 +43,7 @@ namespace CWI.SkillMap.Domain.Repository
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SkillMap;Trusted_Connection=True;");
+            //optionsBuilder.UseSqlServer(@"Server=10.0.100.15\SQLDEV;Database=CWISKMD1;User Id=CWIFBR;Password=CWIFBR;");
         }
     }
 }
