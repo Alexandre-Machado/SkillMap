@@ -8,7 +8,7 @@
 ## Dependencies
 1. Framework: [ASP.NET 5](#ASPNET5)
 2. IDE: [Visual Studio 2015] (#visualstudio15)
-3. Platform Built: [Node.js](https://nodejs.org/)
+3. Platform Build: [Node.js](https://nodejs.org/)
 4. Database: Sql Server width [Entity Framework 7](#ef7)
 
 <a name="ASPNET5"></a>
