@@ -6,11 +6,25 @@
 * Tasks: [![Stories in Ready](https://badge.waffle.io/CWISoftware/SkillMap.png?label=ready&title=Ready)](https://waffle.io/CWISoftware/SkillMap)
 
 ## Dependencies
-* Visual Studio 2015 ([Community 2015 RC](http://go.microsoft.com/fwlink/?LinkId=524433) | [Enterprise 2015 RC](http://go.microsoft.com/fwlink/?LinkId=521794))
-* [Node.js](https://nodejs.org/)
+1. Framework: [ASP.NET 5](#ASPNET5)
+2. IDE: [Visual Studio 2015] (#visualstudio15)
+3. Platform Built: [Node.js](https://nodejs.org/)
+4. Database: Sql Server width [Entity Framework 7](#ef7)
 
-## Technologies
-* [EF7](http://www.bricelam.net/2014/09/14/migrations-on-k.html):
+<a name="ASPNET5"></a>
+### ASP.NET 5
+Install the [ASP.NET 5](https://github.com/aspnet/Home)
+
+<a name="visualstudio15"></a>
+### Visual Studio 2015
+Visual Studio 2015 ([Community 2015 RC](http://go.microsoft.com/fwlink/?LinkId=524433) | [Enterprise 2015 RC](http://go.microsoft.com/fwlink/?LinkId=521794))
+
+<a name="ef7"></a>
+### Node.js
+
+<a name="ef7"></a>
+### Entity Framework 7
+[EF7](http://www.bricelam.net/2014/09/14/migrations-on-k.html):
 
 ```
 dnu restore
