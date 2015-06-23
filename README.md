@@ -1,5 +1,6 @@
 # SkillMap
-> [![Build Status](https://travis-ci.org/CWISoftware/SkillMap.svg)](https://travis-ci.org/CWISoftware/SkillMap)
+> Travis: [![Build Status](https://travis-ci.org/CWISoftware/SkillMap.svg)](https://travis-ci.org/CWISoftware/SkillMap) AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/uhepnks44ihrg139?svg=true)](https://ci.appveyor.com/project/alexandre-machado/skillmap)
+
 
 ## Help and Suport
 * Chat: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CWISoftware/SkillMap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
