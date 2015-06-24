@@ -17,6 +17,7 @@ namespace CWI.SkillMap.Controllers
         public IActionResult Index()
         {
             ViewBag.Count = ProfileService.GetAllProfiles().Count();
+            ViewBag.Name = User.Identity.Name;
             return View();
         }
 

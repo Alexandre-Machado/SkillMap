@@ -1,0 +1,31 @@
+﻿body {
+    min-height: 2000px;
+    padding-top: 80px;
+}
+
+
+.mastery-10 {
+    background-image: url(../images/mastery-icons/Champ_Mastery_10.png);
+}
+
+.mastery-20 {
+    background-image: url(../images/mastery-icons/Champ_Mastery_20.png);
+}
+
+.mastery-30 {
+    background-image: url(../images/mastery-icons/Champ_Mastery_30.png);
+}
+
+.mastery-40 {
+    background-image: url(../images/mastery-icons/Champ_Mastery_40.png);
+}
+
+.mastery-50 {
+    background-image: url(../images/mastery-icons/Champ_Mastery_50.png);
+}
+
+.mastery-10, .mastery-20, .mastery-30, .mastery-40, .mastery-50 {
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}
