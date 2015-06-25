@@ -1,0 +1,12 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/spinner.css",
+    "inputFile": "wwwroot/css/spinner.less",
+    "minify": {
+      "enabled": true
+    },
+    "includeInProject": true,
+    "sourceMap": false,
+    "options": {}
+  }
+]

@@ -38,3 +38,6 @@ dnx . ef migration apply
 // add migration
 dnx . ef migration add MyMigration
 ```
+## Plugins/Addons
+
+* http://codepen.io/anon/pen/XbzYaZ

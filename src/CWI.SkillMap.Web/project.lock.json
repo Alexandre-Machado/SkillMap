@@ -3,6 +3,7 @@
   "version": -9998,
   "projectFileDependencyGroups": {
     "": [
+      "CWI.SkillMap.Domain >= 1.0.0-*",
       "Microsoft.AspNet.Authentication.Cookies >= 1.0.0-beta4",
       "Microsoft.AspNet.Authentication.Facebook >= 1.0.0-beta4",
       "Microsoft.AspNet.Authentication.Google >= 1.0.0-beta4",
@@ -21,8 +22,7 @@
       "Microsoft.Framework.ConfigurationModel.UserSecrets >= 1.0.0-beta4",
       "Microsoft.Framework.Logging >= 1.0.0-beta4",
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta4",
-      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta4",
-      "CWI.SkillMap.Domain >= 1.0.0-*"
+      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta4"
     ],
     "DNX,Version=v4.5.1": []
   },
