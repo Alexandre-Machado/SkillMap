@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using CWI.SkillMap.Models.Skill;
+using CWI.SkillMap.Domain.Service;
 
 namespace CWI.SkillMap.Controllers
 {
+    [Route("skills")]
     public class SkillController : ControllerBase
     {
-        // GET: /<controller>/
+        public SkillController(IProfileService profileService)
+        {
+            ProfileService = profileService;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var model = new SkillViewModel { Skills = new List<SkillModel>() };
+
+            return View(model);
         }
     }
 }

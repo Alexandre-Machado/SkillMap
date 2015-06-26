@@ -1,18 +1,50 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model CWI.SkillMap.Models.Skill.SkillViewModel
 @{
-    // ViewBag.Title = "Home Page";
+    ViewBag.Title = "Skills";
 }
-<table>
-    <thead>
-        <tr>
-            <td>Nome</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>teste</td>
-        </tr>
-    </tbody>
-</table>
+<div class="row">
+    <div class="well bs-component">
+        <fieldset>
+            <legend>Todos os skills</legend>
+            <div>
+                @foreach (var item in Model.Skills)
+                {<div class="col-md-3">
+                    <div class="panel panel-default mastery-10">
+                        <div class="panel-body">
+                            @item.Name
+                        </div>
+                    </div>
+                </div>}
+                <div class="col-md-3">
+                    <div class="panel panel-default mastery-20">
+                        <div class="panel-body">
+                            Ruby
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default mastery-30">
+                        <div class="panel-body">
+                            JavaScript
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default mastery-40">
+                        <div class="panel-body">
+                            ASP.NET
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default mastery-50">
+                        <div class="panel-body">
+                            ASP.NET
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+</div>

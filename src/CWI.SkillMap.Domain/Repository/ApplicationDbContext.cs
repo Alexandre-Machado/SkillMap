@@ -43,7 +43,7 @@ namespace CWI.SkillMap.Domain.Repository
         {
             base.OnConfiguring(optionsBuilder);
 
-            //optionsBuilder.UseSqlServer(@"Server=10.0.100.15\SQLDEV;Database=CWISKMD1;User Id=CWIFBR;Password=CWIFBR;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=aspnet5-SkillMap;Trusted_Connection=True;MultipleActiveResultSets=true;");
         }
     }
 }
