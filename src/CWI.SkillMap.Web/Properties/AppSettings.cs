@@ -7,6 +7,7 @@ namespace CWI.SkillMap
 {
     public class AppSettings
     {
+        public string SharePointImageUrl { get; set; }
         public string SiteTitle { get; set; }
     }
 }

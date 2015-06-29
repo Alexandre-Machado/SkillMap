@@ -1,11 +1,12 @@
-﻿@{
+﻿@model CWI.SkillMap.Models.Home.IndexViewModel
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="">
     <div class="row">
         <div class="col-md-2 text-center">
-            <img height="144" src="//intranet.cwi.com.br/sites/my/User%20Photos/Imagens%20de%20Perfil/cwinet_alexandrelima_LThumb.jpg" alt="..." class="img-rounded">
+            <img height="144" src="~/profile-image/cwinet/alexandrelima" alt="..." class="img-rounded">
             <h4>Alexandre Machado</h4>
         </div>
         <div class="col-md-10">
@@ -13,41 +14,14 @@
                 <fieldset>
                     <legend>Meus skills</legend>
                     <div>
-                        <div class="col-md-3">
+                        @foreach (var item in Model.Skills)
+                        {<div class="col-md-3">
                             <div class="panel panel-default mastery-10">
                                 <div class="panel-body">
-                                    Entity Framework
+                                    @item.Name
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-default mastery-20">
-                                <div class="panel-body">
-                                    Ruby
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-default mastery-30">
-                                <div class="panel-body">
-                                    JavaScript
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-default mastery-40">
-                                <div class="panel-body">
-                                    ASP.NET
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="panel panel-default mastery-50">
-                                <div class="panel-body">
-                                    ASP.NET
-                                </div>
-                            </div>
-                        </div>
+                        </div>}
                     </div>
                 </fieldset>
             </div>

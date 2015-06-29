@@ -5,7 +5,9 @@
 <div class="row">
     <div class="well bs-component">
         <fieldset>
-            <legend>Todos os skills</legend>
+            <legend>
+                Todos os skills [@Model.Skills.Count no total]
+            </legend>
             <div>
                 @foreach (var item in Model.Skills)
                 {<div class="col-md-3">
@@ -15,34 +17,6 @@
                         </div>
                     </div>
                 </div>}
-                <div class="col-md-3">
-                    <div class="panel panel-default mastery-20">
-                        <div class="panel-body">
-                            Ruby
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default mastery-30">
-                        <div class="panel-body">
-                            JavaScript
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default mastery-40">
-                        <div class="panel-body">
-                            ASP.NET
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default mastery-50">
-                        <div class="panel-body">
-                            ASP.NET
-                        </div>
-                    </div>
-                </div>
             </div>
         </fieldset>
     </div>

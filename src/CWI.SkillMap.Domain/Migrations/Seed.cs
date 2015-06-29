@@ -1,12 +1,9 @@
-﻿using CWI.SkillMap.Domain.Entity;
-using Microsoft.Data.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CWI.SkillMap.Domain.Migrations
+﻿namespace CWI.SkillMap.Domain.Migrations
 {
+    using Entity;
+    using Microsoft.Data.Entity;
+    using System.Linq;
+
     public static class Seed
     {
         public static void Run(DbContext db)
@@ -18,6 +15,14 @@ namespace CWI.SkillMap.Domain.Migrations
                     Email = "alexandre@machado.cc",
                     Login = "cwinet\alexandrelima"
                 });
+            if (!db.Set<Skill>().Any())
+                db.AddRange(
+                    new Skill { SkillName = "ASP.NET" },
+                    new Skill { SkillName = "Ruby" },
+                    new Skill { SkillName = "JavaScript" }
+                    );
+
+            db.SaveChanges();
         }
     }
 }

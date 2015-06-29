@@ -43,7 +43,7 @@ namespace CWI.SkillMap.Domain.Repository
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=aspnet5-SkillMap;Trusted_Connection=True;MultipleActiveResultSets=true;");
+            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=aspnet5-SkillMap;Trusted_Connection=True;MultipleActiveResultSets=true;");
         }
     }
 }
