@@ -1,24 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNet.Mvc;
 using CWI.SkillMap.Models.Skill;
 using CWI.SkillMap.Domain.Service;
+using CWI.SkillMap.Domain.Model;
 
 namespace CWI.SkillMap.Controllers
 {
     [Route("skills")]
     public class SkillController : ControllerBase
     {
-        public SkillController(IProfileService profileService)
+        public SkillController(IProfileService profileService, ISkillService skillService)
         {
             ProfileService = profileService;
+            SkillService = skillService;
         }
 
         public IActionResult Index()
         {
-            var model = new SkillViewModel { Skills = new List<SkillModel>() };
+            var model = new SkillViewModel
+            {
+                Skills = SkillService.GetAllSkills().Select(_ => new SkillModel { Name = _.Name }).ToList()
+            };
 
             return View(model);
         }

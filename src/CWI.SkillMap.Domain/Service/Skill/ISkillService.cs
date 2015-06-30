@@ -5,6 +5,6 @@
 
     public interface ISkillService
     {
-        List<ProfileModel> GetAllSkills();
+        List<SkillModel> GetAllSkills();
     }
 }

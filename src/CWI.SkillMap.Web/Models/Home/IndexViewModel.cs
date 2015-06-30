@@ -1,6 +1,6 @@
 ﻿namespace CWI.SkillMap.Models.Home
 {
-    using Skill;
+    using Domain.Model;
     using System.Collections.Generic;
 
     public class IndexViewModel

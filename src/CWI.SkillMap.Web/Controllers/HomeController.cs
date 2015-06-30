@@ -3,11 +3,10 @@ using System.Linq;
 using Microsoft.AspNet.Mvc;
 using CWI.SkillMap.Domain.Service;
 using CWI.SkillMap.Models.Home;
-using CWI.SkillMap.Models.Skill;
 using System.Threading.Tasks;
 using System.Net;
-using System;
 using Microsoft.Framework.OptionsModel;
+using CWI.SkillMap.Domain.Model;
 
 namespace CWI.SkillMap.Controllers
 {
