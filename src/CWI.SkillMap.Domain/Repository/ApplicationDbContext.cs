@@ -32,18 +32,11 @@ namespace CWI.SkillMap.Domain.Repository
             // Add your customizations after calling base.OnModelCreating(builder);
 
             builder.Entity<Profile>().Key(_ => _.ProfileID);
-            builder.Entity<Profile>().Property(_ => _.ProfileID).UseStoreDefault();
+            builder.Entity<Profile>().Property(_ => _.ProfileID);
             builder.Entity<Skill>().Key(_ => _.SkillID);
             builder.Entity<ProfileSkill>().Key(_ => _.ProfileSkillID);
             builder.Entity<Mastery>().Key(_ => _.MasteryID);
 
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-
-            //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=aspnet5-SkillMap;Trusted_Connection=True;MultipleActiveResultSets=true;");
         }
     }
 }
