@@ -47,7 +47,7 @@ namespace CWI.SkillMap.Domain.Repository
 
     public class BaseRepository<T> : BaseRepository where T : class
     {
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return context.Set<T>().AsEnumerable();
         }

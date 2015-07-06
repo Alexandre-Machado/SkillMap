@@ -1,7 +1,6 @@
 ﻿namespace CWI.SkillMap.Models.Skill
 {
     using CWI.SkillMap.Domain.Model;
-    using Mastery;
     using System.Collections.Generic;
 
     public class SkillViewModel

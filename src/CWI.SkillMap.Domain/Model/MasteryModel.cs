@@ -1,4 +1,4 @@
-﻿namespace CWI.SkillMap.Models.Mastery
+﻿namespace CWI.SkillMap.Domain.Model
 {
     public class MasteryModel
     {

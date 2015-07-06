@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNet.Mvc;
+﻿using CWI.SkillMap.Domain.Model;
 using CWI.SkillMap.Domain.Service;
 using CWI.SkillMap.Models.Home;
-using System.Threading.Tasks;
-using System.Net;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Framework.OptionsModel;
-using CWI.SkillMap.Domain.Model;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace CWI.SkillMap.Controllers
 {

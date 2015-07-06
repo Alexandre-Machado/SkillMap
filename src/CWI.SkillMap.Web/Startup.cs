@@ -55,9 +55,11 @@ namespace CWI.SkillMap
 
             // Add EF services to the services container.
             services.AddEntityFramework()
-                .AddSqlServer()
-                .AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+                .AddInMemoryStore()
+                .AddDbContext<ApplicationDbContext>(options => { options.UseInMemoryStore(persist: true); });
+            //.AddSqlServer()
+            //.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             // Add Identity services to the services container.
             //services.AddIdentity<User, IdentityRole>()

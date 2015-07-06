@@ -1,11 +1,10 @@
 {
   "AppSettings": {
-    "SiteTitle": "SkillMap",
+    "SiteTitle": "SkillMap[Release]",
     "SharePointImageUrl":  "http://intranet.cwi.com.br/sites/my/User%20Photos/Imagens%20de%20Perfil/{0}_{1}_LThumb.jpg"
   },
   "Data": {
     "DefaultConnection": {
-      "_ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-SkillMap;Trusted_Connection=True;MultipleActiveResultSets=true",
       "ConnectionString": "Server=10.0.100.15\\SQLDEV;Database=CWISKMD1;User Id=CWIFBR;Password=CWIFBR;"
     }
   }

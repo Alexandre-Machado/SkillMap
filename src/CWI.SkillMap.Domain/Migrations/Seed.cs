@@ -21,6 +21,13 @@
                     new Skill { SkillName = "Ruby" },
                     new Skill { SkillName = "JavaScript" }
                     );
+            if (!db.Set<Mastery>().Any())
+                db.AddRange(
+                    new Mastery { Code = 10, Name = "Iniciante" },
+                    new Mastery { Code = 20, Name = "Competente" },
+                    new Mastery { Code = 30, Name = "Proeficiente" },
+                    new Mastery { Code = 40, Name = "Experiente" },
+                    new Mastery { Code = 50, Name = "Mestre" });
 
             db.SaveChanges();
         }

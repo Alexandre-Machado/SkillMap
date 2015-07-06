@@ -10,5 +10,7 @@ namespace CWI.SkillMap.Domain.Entity
         public int MasteryID { get; set; }
 
         public string Name { get; set; }
+
+        public int Code { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Entity;
+using Microsoft.Data.Entity.Infrastructure;
 using CWI.SkillMap.Domain.Entity;
 using CWI.SkillMap.Domain.Migrations;
 
@@ -17,8 +18,8 @@ namespace CWI.SkillMap.Domain.Repository
             // Create the database and schema if it doesn't exist
             if (!_created)
             {
-                Database.AsRelational().ApplyMigrations();
-                _created = true;
+                //Database.AsRelational().ApplyMigrations();
+                //_created = true;
 
                 Seed.Run(this);
             }
@@ -37,6 +38,14 @@ namespace CWI.SkillMap.Domain.Repository
             builder.Entity<ProfileSkill>().Key(_ => _.ProfileSkillID);
             builder.Entity<Mastery>().Key(_ => _.MasteryID);
 
+        }
+        protected override void OnConfiguring(EntityOptionsBuilder options)
+        {
+            //options.UseInMemoryStore(persist: true);
+
+            //options.UseSqlServer();
+
+            //options.UseSqlServer(@"Server=.\SQLEXPRESS;Database=Blogging;integrated security=True;");
         }
     }
 }

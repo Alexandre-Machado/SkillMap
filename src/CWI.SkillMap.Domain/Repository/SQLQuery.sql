@@ -1,0 +1,3 @@
+﻿
+
+Select * From sys.tables

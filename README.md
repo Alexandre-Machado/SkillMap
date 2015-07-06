@@ -15,6 +15,10 @@
 <a name="ASPNET5"></a>
 ### ASP.NET 5
 Install the [ASP.NET 5](https://github.com/aspnet/Home)
+```
+// install dnx-clr-win-x64.1.0.0-*
+dnvm install latest -arch x64`
+```
 
 <a name="visualstudio15"></a>
 ### Visual Studio 2015
