@@ -19,7 +19,10 @@ namespace CWI.SkillMap.Domain.Service
         {
             return masteryRepository.GetAll().Select(_ => new MasteryModel
             {
-
+                Name = _.Name,
+                Code = _.Code,
+                Description = _.Description,
+                MasteryID = _.MasteryID
             }).ToList();
         }
     }

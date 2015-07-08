@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Http.Authentication;
 using Microsoft.AspNet.Mvc.Rendering;
 
-namespace CWI.SkillMap.Models
+namespace CWI.SkillMap.Web.ViewModels
 {
     public class IndexViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using CWI.SkillMap.Domain.Model;
 using CWI.SkillMap.Domain.Service;
-using CWI.SkillMap.Models.Home;
+using CWI.SkillMap.Web.ViewModels.Home;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Framework.OptionsModel;
 using System.Collections.Generic;

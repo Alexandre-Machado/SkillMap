@@ -1,25 +1,22 @@
-﻿using System.Linq;
+﻿using CWI.SkillMap.Domain.Service;
+using CWI.SkillMap.Web.ViewModels.Mastery;
 using Microsoft.AspNet.Mvc;
-using CWI.SkillMap.Models.Skill;
-using CWI.SkillMap.Domain.Service;
-using CWI.SkillMap.Domain.Model;
 
 namespace CWI.SkillMap.Controllers
 {
-    [Route("mastery")]
+    [Route("levels")]
     public class MasteryController : ControllerBase
     {
-        public MasteryController(IProfileService profileService, ISkillService skillService)
+        public MasteryController(IMasteryService masteryService)
         {
-            ProfileService = profileService;
-            SkillService = skillService;
+            MasteryService = masteryService;
         }
 
         public IActionResult Index()
         {
-            var model = new SkillViewModel
+            var model = new IndexViewModel
             {
-                Skills = SkillService.GetAllSkills().Select(_ => new SkillModel { Name = _.Name }).ToList()
+                Masteries = MasteryService.GetAllMasteries()
             };
 
             return View(model);

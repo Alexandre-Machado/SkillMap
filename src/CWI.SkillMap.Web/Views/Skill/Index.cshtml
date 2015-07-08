@@ -1,7 +1,16 @@
-﻿@model CWI.SkillMap.Models.Skill.SkillViewModel
+﻿@model CWI.SkillMap.Web.ViewModels.Skill.IndexViewModel
 @{
     ViewBag.Title = "Skills";
 }
+<style>
+    .rating{
+        
+    }
+    .rating a {
+        height: 1em;
+        width: 1em;
+    }
+</style>
 <div class="row">
     <div class="well bs-component">
         <fieldset>
@@ -11,9 +20,16 @@
             <div>
                 @foreach (var item in Model.Skills)
                 {<div class="col-md-3">
-                    <div class="panel panel-default mastery-10">
+                    <div class="panel panel-default">
                         <div class="panel-body">
                             @item.Name
+                            <div class="btn-group right">
+                                <ul class="rating">
+                                    @foreach (var s in Model.Masteries)
+                                    {
+                                        <li><button class="mastery-center mastery-@(s.Code)" title="@s.Name">m</button></li>}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>}

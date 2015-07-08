@@ -29,3 +29,7 @@
     background-position: right center;
     background-size: contain;
 }
+
+.mastery-center {
+    background-position: center center;
+}

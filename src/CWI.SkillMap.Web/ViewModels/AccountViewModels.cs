@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Mvc.Rendering;
 
-namespace CWI.SkillMap.Models
+namespace CWI.SkillMap.Web.ViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

@@ -12,5 +12,7 @@ namespace CWI.SkillMap.Domain.Entity
         public string Name { get; set; }
 
         public int Code { get; set; }
+
+        public string Description { get; set; }
     }
 }

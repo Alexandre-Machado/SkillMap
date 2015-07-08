@@ -1,0 +1,35 @@
+﻿@model CWI.SkillMap.Web.ViewModels.Mastery.IndexViewModel
+@{
+    ViewBag.Title = "Níveis";
+}
+<style>
+    fieldset img.mastery-sm {
+        height: auto;
+        width: auto;
+        max-width: 80px;
+        max-height: 80px;
+    }
+</style>
+<div class="row">
+    <div class="well bs-component">
+        <fieldset>
+            <legend>
+                O que são os níveis?
+            </legend>
+            <div>
+                @foreach (var item in Model.Masteries)
+                {<div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src="~/images/mastery-icons/champ_mastery_@(item.Code).png" class="mastery-sm" />
+                    </div>
+                    <blockquote class="col-md-10">
+                        <strong>@item.Name</strong>
+                        <p>@item.Description</p>
+                    </blockquote>
+                </div>}
+            </div>
+        </fieldset>
+
+    </div>
+
+</div>

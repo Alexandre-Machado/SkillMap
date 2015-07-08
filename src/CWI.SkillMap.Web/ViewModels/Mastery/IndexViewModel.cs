@@ -1,10 +1,10 @@
-﻿namespace CWI.SkillMap.Models.Home
+﻿namespace CWI.SkillMap.Web.ViewModels.Mastery
 {
     using Domain.Model;
     using System.Collections.Generic;
 
     public class IndexViewModel
     {
-        public List<SkillModel> Skills { get; set; }
+        public List<MasteryModel> Masteries { get; set; }
     }
 }

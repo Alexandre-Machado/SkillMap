@@ -23,11 +23,11 @@
                     );
             if (!db.Set<Mastery>().Any())
                 db.AddRange(
-                    new Mastery { Code = 10, Name = "Iniciante" },
-                    new Mastery { Code = 20, Name = "Competente" },
-                    new Mastery { Code = 30, Name = "Proeficiente" },
-                    new Mastery { Code = 40, Name = "Experiente" },
-                    new Mastery { Code = 50, Name = "Mestre" });
+                    new Mastery { Code = 10, Name = "Iniciante", Description = "recordação não-situacional, reconhecimento decomposto, decisão analítica, consciência monitorada" },
+                    new Mastery { Code = 20, Name = "Competente", Description = "recordação situacional, reconhecimento decomposto, decisão analítica, consciência monitorada" },
+                    new Mastery { Code = 30, Name = "Proeficiente", Description = "recordação situacional, reconhecimento holítico, decisão analítica, consciência monitorada" },
+                    new Mastery { Code = 40, Name = "Experiente", Description = "recordação situacional, reconhecimento holítico, decisão intuitiva, consciência monitorada" },
+                    new Mastery { Code = 50, Name = "Mestre", Description = "recordação situacional, reconhecimento holítico, decisão intuitiva, consciência absorvida" });
 
             db.SaveChanges();
         }
