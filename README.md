@@ -1,4 +1,6 @@
-# SkillMap
+# [DESCONTINUADO] SkillMap
+
+Este projeto foi incorporado no [enlighten](https://github.com/CWISoftware/enlighten).
 > Travis: [![Build Status](https://travis-ci.org/CWISoftware/SkillMap.svg)](https://travis-ci.org/CWISoftware/SkillMap) AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/uhepnks44ihrg139?svg=true)](https://ci.appveyor.com/project/alexandre-machado/skillmap)
 
 
